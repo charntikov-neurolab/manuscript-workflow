@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="markdown-git-and-github-for-academic-writing-a-guide.html">
+<link rel="prev" href="prerequisites-1.html">
+<link rel="next" href="gitflow-for-manuscript-preparation-1.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -198,47 +198,175 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">R, RMarkdown, Git, and GitHub for Academic Writing: A Guide</h1>
-<h4 class="author"><em>Sergios (Sergey) Charntikov</em></h4>
-<h4 class="date"><em>2017-04-12</em></h4>
+<div id="rmarkdown-workflow-1" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Rmarkdown workflow</h1>
+<div id="markdown-template-1" class="section level2">
+<h2><span class="header-section-number">4.1</span> Markdown Template</h2>
+<p>To write this manuscript we are using Rmarkdown Elsevier template. The <code>rticles</code> package provides a suite of custom R Markdown LaTeX formats and templates for various formats, including Elsevier journal template.</p>
+<p>Under the hood, LaTeX templates are used to ensure that documents conform precisely to submission standards. At the same time, composition and formatting can be done using lightweight markdown syntax, and R code and its output can be seamlessly included using knitr.</p>
+<p>Using <code>rticles</code> requires the prerequisites that will be automatically installed with the latest release of RStudio. Please make sure that you are using latest version of RStudio and update all the packages in your package library.</p>
+<p><code>rticles</code> - <a href="https://github.com/rstudio/rticles" class="uri">https://github.com/rstudio/rticles</a></p>
+<div id="installation-1" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Installation</h3>
+<p>You can install and use <code>rticles</code> from CRAN as follows:</p>
+<p><code>install.packages(&quot;rticles&quot;, type = &quot;source&quot;)</code></p>
+<p>If you wish to install the development version from GitHub you can do this:</p>
+<p><code>devtools::install_github(&quot;rstudio/rticles&quot;)</code></p>
 </div>
-<div id="preface" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Preface</h1>
-<p>What is this book all about</p>
-<div id="structure-of-the-book" class="section level2">
-<h2><span class="header-section-number">1.1</span> Structure of the book</h2>
+<div id="using-rticles-from-rstudio-1" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Using <code>rticles</code> from RStudio</h3>
+<ul>
+<li>Install latest RStudio</li>
+<li>Install the <code>rticles</code> package
+<ul>
+<li><code>install.packages(&quot;rticles&quot;, type = &quot;source&quot;)</code></li>
+</ul></li>
+<li>RStudio::File-New R Markdown-From Template-Elsevier Journal Article</li>
+</ul>
 </div>
-<div id="software-information" class="section level2">
-<h2><span class="header-section-number">1.2</span> Software information</h2>
-<p>The R session information when compiling this book is shown below:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sessionInfo</span>()</code></pre></div>
-<pre><code>## R version 3.3.1 (2016-06-21)
-## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows 10 x64 (build 10240)
-## 
-## locale:
-## [1] LC_COLLATE=English_United States.1252 
-## [2] LC_CTYPE=English_United States.1252   
-## [3] LC_MONETARY=English_United States.1252
-## [4] LC_NUMERIC=C                          
-## [5] LC_TIME=English_United States.1252    
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
-## 
-## loaded via a namespace (and not attached):
-##  [1] backports_1.0.5 bookdown_0.3    magrittr_1.5    rprojroot_1.2  
-##  [5] tools_3.3.1     htmltools_0.3.5 rstudioapi_0.6  yaml_2.1.14    
-##  [9] Rcpp_0.12.10    stringi_1.1.5   rmarkdown_1.4   knitr_1.15.1   
-## [13] stringr_1.2.0   digest_0.6.12   evaluate_0.10</code></pre>
+<div id="yaml-1" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> YAML</h3>
+<p>YAML is the preamble found at the top of the .Rmd file. YAML is used to configure front matter of the article and some other important technical parameters of your document.</p>
+<p>Front matter:</p>
+<pre><code>title:
+author:
+address:
+abstract:</code></pre>
+<p>Citations and bibliography:</p>
+<pre><code>bibliography: file_with_your_citations.bib
+csl: biomed-central.csl</code></pre>
+<p>Acceptable bibliography files: mods, bibtex, ris, enl, xml, medline, copac, json.</p>
+<p><code>csl</code> defines citation style if other than standard Elsevier format is needed (see <a href="https://www.zotero.org/styles" class="uri">https://www.zotero.org/styles</a> for repository of current available styles.).</p>
+<p>Cross-referencing</p>
+<pre><code>output:
+   bookdown::pdf_book:
+    base_format: rticles::elsevier_article</code></pre>
 </div>
-<div id="acknowledgments" class="section level2">
-<h2><span class="header-section-number">1.3</span> Acknowledgments</h2>
 </div>
-<div id="about-the-author" class="section level2">
-<h2><span class="header-section-number">1.4</span> About the author</h2>
+<div id="writing-in-markdown-1" class="section level2">
+<h2><span class="header-section-number">4.2</span> Writing in markdown</h2>
+<div id="overview-1" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Overview</h3>
+<p>Writing in markdown is fairly easy even without prior knowledge of other markup languages. Markdown is a lightweight markup language design so it can be converted to many other formats including LaTex - a format commonly used for typesetting academic typography. Writing in markdown is much more pleasing than writing in LaTex because of the minimal markup. Because of the minimal markup, documents written in markdown can be easily read and edited without code distractions. Furthermore, because markdown documents are written in plain text they can be edited with a plain text editor which are freely available on all major platforms. There are many specially designed editors with additional features that may be more attractive to different groups of developers or writers working with markdown documents. Editors that work great for writing academic style documents include RStudio, Atom, and Sublime Text.</p>
+</div>
+<div id="markdown-basics-1" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> Markdown basics</h3>
+<p>Emphasis</p>
+<pre><code>*italic*   **bold**
 
+_italic_   __bold__</code></pre>
+<p>Headers</p>
+<pre><code># Header 1
+
+## Header 2
+
+### Header 3
+</code></pre>
+<p>Lists</p>
+<pre><code>* Item 1
+* Item 2
+    + Item 2a (note: indent by 4 spaces before +)
+    + Item 2b</code></pre>
+<p>Images</p>
+<p>Images on the web or local files in the same directory:</p>
+<pre><code>![](http://example.com/logo.png)
+
+![optional caption text](figures/img.png)</code></pre>
+<p>More on Markdown basics can found on the excellent RStudio website: <a href="http://rmarkdown.rstudio.com/authoring_basics.html" class="uri">http://rmarkdown.rstudio.com/authoring_basics.html</a></p>
+</div>
+</div>
+<div id="latex-1" class="section level2">
+<h2><span class="header-section-number">4.3</span> LaTex</h2>
+<p>Any LaTex code can be included in the markdown document. LaTex code included in the <code>.Rmd</code> file will be processed (“knitted”) by RStudio’s <code>knitr</code> package and then passed to <code>pandoc</code> document converter. In this process, <code>knitr</code> takes plain text document with markup and code, executes embedded commands, and then compiles results into a separate document which is then passed to <code>pandoc</code> for final conversion. In the workflow relevant to writing academic manuscript using raw <code>.Rmd</code> file, <code>.Rmd</code> file is first converted to <code>.tex</code> and then the resulting <code>.tex</code> file is converted to .pdf.</p>
+</div>
+<div id="tables-1" class="section level2">
+<h2><span class="header-section-number">4.4</span> Tables</h2>
+<div id="plain-markdown-table-1" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Plain markdown table</h3>
+<p>Adding tables to a manuscript is easy with plain markdown. See an example below of how you can</p>
+<pre><code>Header 1 | Header 2
+------------- | -------------
+Cell 1 | Cell 2
+Cell 3 | Cell 4</code></pre>
+<p>When creating a table in markdown there is no need to perfectly align all separators.</p>
+<p>The code above will generate this table:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Header 1</th>
+<th>Header 2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cell 1</td>
+<td>Cell 2</td>
+</tr>
+<tr class="even">
+<td>Cell 3</td>
+<td>Cell 4</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="latex-tables-1" class="section level3">
+<h3><span class="header-section-number">4.4.2</span> LaTex tables</h3>
+<p>LaTex tables can be embedded into <code>.Rmd</code> markdown file. LaTex tables can be generated using popular R packages like <code>stargazer</code> or <code>xtable</code>. LaTex tables can be also generated by numerous free online conversion or table generation services (just google it).</p>
+</div>
+<div id="r-code-generated-tables-1" class="section level3">
+<h3><span class="header-section-number">4.4.3</span> R code generated tables</h3>
+<p>To reference a table a table needs to be included in the r chunk with the chunk label.</p>
+<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">```{r cars-table}
+library(&quot;knitr&quot;)
+
+kable(
+  head(mtcars[, 1:8], 10), booktabs = TRUE,
+  caption = &#39;A table of the first 10 rows of the mtcars data.&#39;
+)
+```</code></pre></div>
+<p>In the example above the chunk label is <code>cars-table</code> so to reference this table use prefix <code>tab:</code> plus the chunk label - <code>tab:cars-table</code>. Here is the referencing in action (see Table <code>\@ref(tab:cars-table)</code>).</p>
+<p>Using this approach tables will be generated at the end of the manuscript accompanied with an automatic generation of the “List of Tables” (hyperlinks in all locations included).</p>
+</div>
+</div>
+<div id="figures-1" class="section level2">
+<h2><span class="header-section-number">4.5</span> Figures</h2>
+<p>Adding figures to your manuscript can be done by inserting pre-generated images or by generating figures right from the embedded R code. It is highly advisable to adapt the latter approach of generating figures from embedded r code to enhance reproducibility of your findings and to minimize common versioning errors (unintended inclusion of earlier or inaccurate version of the figure).</p>
+<div id="inserting-an-image-from-a-file-1" class="section level3">
+<h3><span class="header-section-number">4.5.1</span> Inserting an image from a file</h3>
+<p><code>![caption for my image](path/to/image.jpg)</code></p>
+<p>It is possible to include an image from any accessible directory. However, it is advisable to have a /figures or /images folder in your project directory with all the figures or images used for the project.</p>
+<p>Elsevier template will automatically generate figure caption. If you are using other template to typeset your manuscript then you may need to add <code>fig_caption: yes</code> YAML option to render a caption.</p>
+</div>
+<div id="r-code-generated-figures-1" class="section level3">
+<h3><span class="header-section-number">4.5.2</span> R code generated figures</h3>
+<p>It is advisable to generate figures directly from a code embedded in the manuscript. One of the options to do that would be to include R code for each figure in each separate <code>figure</code> environment (chunk ) at the very end of your manuscript. This way each figure <code>chunk</code> can have reference label and a figure captions (e.g., <code>{r nice-fig, fig.cap='Here is a nice figure!'}</code>). Chunk parameters also can be used fine tune apperance of the figure in the manuscritp (e.g., <code>out.width='80%', fig.asp=.75, fig.align='center'</code>).</p>
+<p>For example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="st">```</span><span class="dt">{r nice-fig, fig.cap=&#39;Here is a nice figure!&#39;, out.width=&#39;80%&#39;,</span>
+<span class="dt">fig.asp=.75, fig.align=&#39;center&#39;}</span>
+<span class="dt">par(mar = c(4, 4, .1, .1))</span>
+<span class="dt">plot(pressure, type = &#39;b&#39;, pch = 19)</span>
+<span class="st">```</span></code></pre></div>
+<p>Figure can be referenced by its code chunk label with the <code>fig:</code> prefix, e.g., see Figure <code>\@ref(fig:nice-fig)</code>.</p>
+<p>The following guideline is from <a href="https://bookdown.org/yihui/bookdown/" class="uri">https://bookdown.org/yihui/bookdown/</a></p>
+<blockquote>
+<p>If you want to cross-reference figures or tables generated from a code chunk, please make sure the chunk label only contains alphanumeric characters (a-z, A-Z, 0-9), slashes (/), or dashes (-).</p>
+</blockquote>
+</div>
+<div id="crossreferensing-tips-1" class="section level3">
+<h3><span class="header-section-number">4.5.3</span> Crossreferensing tips</h3>
+<p>To cross reference figures or tables generated within a code chunk labels within the chunk should only contain alphanumeric characters (a-z, A-Z, 0-9), slashes (/), or dashes (-). For example <code>{r nice-fig</code> and not <code>{r nice.fig</code> or <code>{r nice&amp;fig</code>.</p>
+</div>
+<div id="setting-aspect-ratio-of-plots-1" class="section level3">
+<h3><span class="header-section-number">4.5.4</span> Setting aspect ratio of plots</h3>
+<p>The aspect ratio of a figure is the ratio of its longer side to its shorter side - the with to height ratio. The golden ratio (1.618) is the ratio that has been appearing in ancient artwork as early as 2,400 BCE and fascinated many ancient mathematicians and artists alike. Edward Tufte suggested that “[g]raphics should tend toward the horizontal” and proposed the use of Golden ratio to create visually appealing figures (Tufte, E. R. 2001). Aspect ratio in R chunk can be set by using <code>fig.asp</code> command. For example, to set a Golden ratio for a figure (1/1.618=0.618) you would type <code>fig.asp=0.618</code></p>
+<blockquote>
+<p>The chunk option <code>fig.asp</code> can be used to set the aspect ratio of plots, i.e., the ratio of figure height/width. If the figure width is 6 inches (<code>fig.width = 6</code>) and <code>fig.asp = 0.7</code>, the figure height will be automatically calculated from <code>fig.width * fig.asp = 6 * 0.7 = 4.2</code>.</p>
+</blockquote>
+<blockquote>
+<p>The actual size of a plot is determined by the chunk options fig.width and fig.height (the size of the plot generated from a graphical device), and we can specify the output size of plots via the chunk options out.width and out.height. The possible value of these two options depends on the output format of the document. For example, <code>out.width = '30%'</code> is a valid value for HTML output, but not for LaTeX/PDF output. However, knitr will automatically convert a percentage value for out.width of the form x% to (x / 100) <code>\linewidth</code>, e.g., <code>out.width = '70%'</code> will be treated as <code>.7\linewidth</code> when the output format is LaTeX. This makes it possible to specify a relative width of a plot in a consistent manner.</p>
+</blockquote>
+
+</div>
 </div>
 </div>
             </section>
@@ -246,8 +374,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-
-<a href="markdown-git-and-github-for-academic-writing-a-guide.html" class="navigation navigation-next navigation-unique" aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="prerequisites-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="gitflow-for-manuscript-preparation-1.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
@@ -275,7 +403,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-rmarkdow-workflow.Rmd",
 "text": "Edit"
 },
 "download": ["bookdown-demo.pdf", "bookdown-demo.epub"],

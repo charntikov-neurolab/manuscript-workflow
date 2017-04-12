@@ -1,0 +1,177 @@
+# GitFlow for Manuscript Preparation
+
+## Why use Git for manuscript preparation?
+
+Git is a free and open source version control system. Git is designed to efficiently handle small and large project whether your are working on PC, Mac, or Linux. Git features make is a versatile companion for any size of the writing project but it especially stands out in its ability to handle complex writing projects like an original research manuscript for example. Git allows and encourages of creation of multiple local or remote branches that can be used for independent development of project features. When branches mature, or when features are fully developed, they can be seamlessly merged into the main branch called `master`. Thus, new branches can be conceptualized as a *sandbox* for new feature where user can freely explore a hypothetical scenario of developing this new feature without modifying content of a `master` branch (context of a main project or a file). This ability to easily create new branches and seamlessly switch between branches facilitates more efficient workflow for writing complex documents like a research manuscript. Although this method requires additional time investment to master this process, it is likely that many researchers will find this investment beneficial in the long term.
+
+## General overview of project structure over time
+
+Research manuscripts are an example of
+
+## General overview of team workflow
+
+> Content coming soon.
+
+## General outline
+
+- `master` branch will be used ONLY for submission quality files
+- `rough_draft` branch will be used ONLY for final draft quality work
+- we will use local branches to develop content for `rough_draft` stage and merge to `rough_draft` through pull requests only
+- we will merge to `master` branch only when we have `rough_draft` ready for submission
+- we will exclude `*.pdf` files from git tracking by adding them to .gitignore` file
+- we will exclude `images/*` directory from git tracking by adding this directory to `.gitignore` file
+- `.gitignore` file should be in the main directory with the following exceptions:
+	- .Rproj.user
+	- .Rhistory
+	- .RData
+	- .Ruserdata
+	- Data-Visualization-Analysis/figures/*
+	- *.pdf
+	- .Rproj
+
+
+## Practical appliation to a manuscript development
+
+The folowing visual representation of a GitFlow was heavily adapted from: http://nvie.com/posts/a-successful-git-branching-model/
+
+![GitFlow for development of a Research Manuscript](GitFlow-Science.png)
+
+
+
+## Main branches
+
+The central repo holds two branches with an infinite lifetime:
+
+- `master` (publication ready state)
+- `rough-draft` (latest delivered development state)
+
+When `rough-draft` branch is reached stable state suitable for submission to a journal, all of the changes are merged into
+`master` branch and tagged with a manuscript release number.
+
+## Supporting branches
+
+Supporting branches have limited life time and will be removed eventually.
+
+Two different types of branches we may use:
+
+- Feature branches
+- Pre-submission branches
+
+### Feature branches
+
+Feature branches are used to develop a specific part of the manuscript. These are the branches where the most work is done by the members of the team. These branches are created locally on the machines where these features are being develop and they are merged through Pull requests only into rough-draft branch. These branches are short lived and will follow the following convention:
+
+May branch off from:
+
+- `rough-draft`
+
+Must merge back into:
+
+- `rough-draft`
+
+Branch naming convention:
+
+- anything except master, rough draft, pre-submission
+
+
+#### Creating a feature branch
+
+When starting work on a new feature, branch off from the `rough-draft` branch.
+
+> $ git checkout -b myfeature rough-draft
+
+> 	Switched to a new branch "myfeature"`
+
+#### Incorporating a finished feature on develop
+
+Finished features may be merged into the develop branch to definitely add them to the upcoming release:
+
+> $ git checkout develop
+
+> 	Switched to branch 'develop'
+
+
+> $ git merge --no-ff myfeature
+
+> 	Updating ea1b82a..05e9557
+
+> 	(Summary of changes)
+
+> $ git branch -d myfeature
+
+> 	Deleted branch myfeature (was 05e9557).
+
+> $ git push origin develop
+
+The `--no-ff` flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.
+
+In the latter case, it is impossible to see from the Git history which of the commit objects together have implemented a feature—you would have to manually read all the log messages. Reverting a whole feature (i.e. a group of commits), is a true headache in the latter situation, whereas it is easily done if the --no-ff flag was used.
+
+Yes, it will create a few more (empty) commit objects, but the gain is much bigger than the cost.
+
+
+### Pre-submission branch
+
+May branch off from:
+
+`rough-draft`
+
+Must merge back into:
+
+`master`
+
+Branch naming convention:
+
+`pre-submission*`
+
+This branch is to bring a complete rough draft to a specific publication standard. Various journals will have variuos requirements. This branch will branch of a complete rough-draft and will merge only into master. A submission will be residing in the master branch.
+
+#### Creating pre-submission branch
+
+> $ git checkout -b `presubmission` rough-draft
+
+> 	Switched to a new branch "presubmission"
+
+> $ ./bump-version.sh 0.1
+
+> 	Files modified successfully, manuscript version bumped to 0.1.
+
+> $ git commit -a -m "Bumped manuscript version number to 0.1"
+
+> 	[presubmission 41e61bb] Bumped version number to 0.1
+
+> 	1 files changed, 1 insertions(+), 1 deletions(-)
+
+Don’t forget to bump the version number after branching off!
+
+Then, bring the manuscript to a submission ready state in one or more separate commits.
+
+> $ git commit -m "Manuscript is brought to submission ready state for sumbmission in ... "
+
+> 	[presubmission abbe5d6] Manuscript is brought to submission ready state for sumbmission in ...
+
+> 	5 files changed, 32 insertions(+), 17 deletions(-)
+
+##### Finishing presubmission branch
+
+When finished, the `presubmission` branch needs to be merged into `master`.
+
+First, update master and tag the release.
+
+> $ git checkout master
+
+>       Switched to branch 'master'
+
+> $ git merge --no-ff presubmission
+
+>       Merge made by recursive.
+
+>       (Summary of changes)
+
+> $ git tag -a 0.1
+
+Finally, remove the temporary `presubmission` branch:
+
+> $ git branch -d presubmission
+
+>       Deleted branch presubmission (was abbe5d6).
