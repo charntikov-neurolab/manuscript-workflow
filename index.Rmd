@@ -9,7 +9,7 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: scharntikov/manuscript-workflow
-description: "This is a detailed manual outlining a workflow for creating and publishing academic manuscripts using R, RMarkdown, Git, and GitHub."
+description: "This guide attempts to deliver a comprehensive workflow for devoloping and publishing of academic manuscripts with the help of R, Rmarkdown, Git, and GitHub."
 ---
 
 # Preface
@@ -31,4 +31,3 @@ sessionInfo()
 ## Acknowledgments
 
 ## About the author
-

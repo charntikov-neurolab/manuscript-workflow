@@ -1,3 +1,1 @@
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Please see the page "Get Started" at https://bookdown.org/ for how to compile this example.
-
-You can find the preview of this example at https://bookdown.org/yihui/bookdown-demo/
+This is a main project directory for working draft of "R, RMarkdown, Git, and GitHub for Academic Writing: A Guide". This guide attempts to deliver a comprehensive workflow for devoloping and publishing of academic manuscripts with the help of R, Rmarkdown, Git, and GitHub. 

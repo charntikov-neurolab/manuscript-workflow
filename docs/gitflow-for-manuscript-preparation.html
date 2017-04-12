@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="prerequisites.html">
+<link rel="prev" href="rmarkdown-workflow.html">
+<link rel="next" href="applications.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -172,47 +172,201 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">R, RMarkdown, Git, and GitHub for Academic Writing: A Guide</h1>
-<h4 class="author"><em>Sergios (Sergey) Charntikov</em></h4>
-<h4 class="date"><em>2017-04-12</em></h4>
+<div id="gitflow-for-manuscript-preparation" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> GitFlow for Manuscript Preparation</h1>
+<div id="why-use-git-for-manuscript-preparation" class="section level2">
+<h2><span class="header-section-number">4.1</span> Why use Git for manuscript preparation?</h2>
+<p>Git is a free and open source version control system. Git is designed to efficiently handle small and large project whether your are working on PC, Mac, or Linux. Git features make is a versatile companion for any size of the writing project but it especially stands out in its ability to handle complex writing projects like an original research manuscript for example. Git allows and encourages of creation of multiple local or remote branches that can be used for independent development of project features. When branches mature, or when features are fully developed, they can be seamlessly merged into the main branch called <code>master</code>. Thus, new branches can be conceptualized as a <em>sandbox</em> for new feature where user can freely explore a hypothetical scenario of developing this new feature without modifying content of a <code>master</code> branch (context of a main project or a file). This ability to easily create new branches and seamlessly switch between branches facilitates more efficient workflow for writing complex documents like a research manuscript. Although this method requires additional time investment to master this process, it is likely that many researchers will find this investment beneficial in the long term.</p>
 </div>
-<div id="preface" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Preface</h1>
-<p>What is this book all about</p>
-<div id="structure-of-the-book" class="section level2">
-<h2><span class="header-section-number">1.1</span> Structure of the book</h2>
+<div id="general-overview-of-project-structure-over-time" class="section level2">
+<h2><span class="header-section-number">4.2</span> General overview of project structure over time</h2>
+<p>Research manuscripts are an example of</p>
 </div>
-<div id="software-information" class="section level2">
-<h2><span class="header-section-number">1.2</span> Software information</h2>
-<p>The R session information when compiling this book is shown below:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sessionInfo</span>()</code></pre></div>
-<pre><code>## R version 3.3.1 (2016-06-21)
-## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows 10 x64 (build 10240)
-## 
-## locale:
-## [1] LC_COLLATE=English_United States.1252 
-## [2] LC_CTYPE=English_United States.1252   
-## [3] LC_MONETARY=English_United States.1252
-## [4] LC_NUMERIC=C                          
-## [5] LC_TIME=English_United States.1252    
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
-## 
-## loaded via a namespace (and not attached):
-##  [1] backports_1.0.5 bookdown_0.3    magrittr_1.5    rprojroot_1.2  
-##  [5] tools_3.3.1     htmltools_0.3.5 rstudioapi_0.6  yaml_2.1.14    
-##  [9] Rcpp_0.12.10    stringi_1.1.5   rmarkdown_1.4   knitr_1.15.1   
-## [13] stringr_1.2.0   digest_0.6.12   evaluate_0.10</code></pre>
+<div id="general-overview-of-team-workflow" class="section level2">
+<h2><span class="header-section-number">4.3</span> General overview of team workflow</h2>
+<blockquote>
+<p>Content coming soon.</p>
+</blockquote>
 </div>
-<div id="acknowledgments" class="section level2">
-<h2><span class="header-section-number">1.3</span> Acknowledgments</h2>
+<div id="general-outline" class="section level2">
+<h2><span class="header-section-number">4.4</span> General outline</h2>
+<ul>
+<li><code>master</code> branch will be used ONLY for submission quality files</li>
+<li><code>rough_draft</code> branch will be used ONLY for final draft quality work</li>
+<li>we will use local branches to develop content for <code>rough_draft</code> stage and merge to <code>rough_draft</code> through pull requests only</li>
+<li>we will merge to <code>master</code> branch only when we have <code>rough_draft</code> ready for submission</li>
+<li>we will exclude <code>*.pdf</code> files from git tracking by adding them to .gitignore` file</li>
+<li>we will exclude <code>images/*</code> directory from git tracking by adding this directory to <code>.gitignore</code> file</li>
+<li><code>.gitignore</code> file should be in the main directory with the following exceptions:
+<ul>
+<li>.Rproj.user</li>
+<li>.Rhistory</li>
+<li>.RData</li>
+<li>.Ruserdata</li>
+<li>Data-Visualization-Analysis/figures/*</li>
+<li>*.pdf</li>
+<li>.Rproj</li>
+</ul></li>
+</ul>
 </div>
-<div id="about-the-author" class="section level2">
-<h2><span class="header-section-number">1.4</span> About the author</h2>
+<div id="practical-appliation-to-a-manuscript-development" class="section level2">
+<h2><span class="header-section-number">4.5</span> Practical appliation to a manuscript development</h2>
+<p>The folowing visual representation of a GitFlow was heavily adapted from: <a href="http://nvie.com/posts/a-successful-git-branching-model/" class="uri">http://nvie.com/posts/a-successful-git-branching-model/</a></p>
+<div class="figure">
+<img src="images/GitFlow-Science.png" alt="GitFlow for development of a Research Manuscript" />
+<p class="caption">GitFlow for development of a Research Manuscript</p>
+</div>
+</div>
+<div id="main-branches" class="section level2">
+<h2><span class="header-section-number">4.6</span> Main branches</h2>
+<p>The central repo holds two branches with an infinite lifetime:</p>
+<ul>
+<li><code>master</code> (publication ready state)</li>
+<li><code>rough-draft</code> (latest delivered development state)</li>
+</ul>
+<p>When <code>rough-draft</code> branch is reached stable state suitable for submission to a journal, all of the changes are merged into <code>master</code> branch and tagged with a manuscript release number.</p>
+</div>
+<div id="supporting-branches" class="section level2">
+<h2><span class="header-section-number">4.7</span> Supporting branches</h2>
+<p>Supporting branches have limited life time and will be removed eventually.</p>
+<p>Two different types of branches we may use:</p>
+<ul>
+<li>Feature branches</li>
+<li>Pre-submission branches</li>
+</ul>
+<div id="feature-branches" class="section level3">
+<h3><span class="header-section-number">4.7.1</span> Feature branches</h3>
+<p>Feature branches are used to develop a specific part of the manuscript. These are the branches where the most work is done by the members of the team. These branches are created locally on the machines where these features are being develop and they are merged through Pull requests only into rough-draft branch. These branches are short lived and will follow the following convention:</p>
+<p>May branch off from:</p>
+<ul>
+<li><code>rough-draft</code></li>
+</ul>
+<p>Must merge back into:</p>
+<ul>
+<li><code>rough-draft</code></li>
+</ul>
+<p>Branch naming convention:</p>
+<ul>
+<li>anything except master, rough draft, pre-submission</li>
+</ul>
+<div id="creating-a-feature-branch" class="section level4">
+<h4><span class="header-section-number">4.7.1.1</span> Creating a feature branch</h4>
+<p>When starting work on a new feature, branch off from the <code>rough-draft</code> branch.</p>
+<blockquote>
+<p>$ git checkout -b myfeature rough-draft</p>
+</blockquote>
+<blockquote>
+<p>Switched to a new branch “myfeature”`</p>
+</blockquote>
+</div>
+<div id="incorporating-a-finished-feature-on-develop" class="section level4">
+<h4><span class="header-section-number">4.7.1.2</span> Incorporating a finished feature on develop</h4>
+<p>Finished features may be merged into the develop branch to definitely add them to the upcoming release:</p>
+<blockquote>
+<p>$ git checkout develop</p>
+</blockquote>
+<blockquote>
+<p>Switched to branch ‘develop’</p>
+</blockquote>
+<blockquote>
+<p>$ git merge –no-ff myfeature</p>
+</blockquote>
+<blockquote>
+<p>Updating ea1b82a..05e9557</p>
+</blockquote>
+<blockquote>
+<p>(Summary of changes)</p>
+</blockquote>
+<blockquote>
+<p>$ git branch -d myfeature</p>
+</blockquote>
+<blockquote>
+<p>Deleted branch myfeature (was 05e9557).</p>
+</blockquote>
+<blockquote>
+<p>$ git push origin develop</p>
+</blockquote>
+<p>The <code>--no-ff</code> flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.</p>
+<p>In the latter case, it is impossible to see from the Git history which of the commit objects together have implemented a feature—you would have to manually read all the log messages. Reverting a whole feature (i.e. a group of commits), is a true headache in the latter situation, whereas it is easily done if the –no-ff flag was used.</p>
+<p>Yes, it will create a few more (empty) commit objects, but the gain is much bigger than the cost.</p>
+</div>
+</div>
+<div id="pre-submission-branch" class="section level3">
+<h3><span class="header-section-number">4.7.2</span> Pre-submission branch</h3>
+<p>May branch off from:</p>
+<p><code>rough-draft</code></p>
+<p>Must merge back into:</p>
+<p><code>master</code></p>
+<p>Branch naming convention:</p>
+<p><code>pre-submission*</code></p>
+<p>This branch is to bring a complete rough draft to a specific publication standard. Various journals will have variuos requirements. This branch will branch of a complete rough-draft and will merge only into master. A submission will be residing in the master branch.</p>
+<div id="creating-pre-submission-branch" class="section level4">
+<h4><span class="header-section-number">4.7.2.1</span> Creating pre-submission branch</h4>
+<blockquote>
+<p>$ git checkout -b <code>presubmission</code> rough-draft</p>
+</blockquote>
+<blockquote>
+<p>Switched to a new branch “presubmission”</p>
+</blockquote>
+<blockquote>
+<p>$ ./bump-version.sh 0.1</p>
+</blockquote>
+<blockquote>
+<p>Files modified successfully, manuscript version bumped to 0.1.</p>
+</blockquote>
+<blockquote>
+<p>$ git commit -a -m “Bumped manuscript version number to 0.1”</p>
+</blockquote>
+<blockquote>
+<p>[presubmission 41e61bb] Bumped version number to 0.1</p>
+</blockquote>
+<blockquote>
+<p>1 files changed, 1 insertions(+), 1 deletions(-)</p>
+</blockquote>
+<p>Don’t forget to bump the version number after branching off!</p>
+<p>Then, bring the manuscript to a submission ready state in one or more separate commits.</p>
+<blockquote>
+<p>$ git commit -m “Manuscript is brought to submission ready state for sumbmission in …”</p>
+</blockquote>
+<blockquote>
+<p>[presubmission abbe5d6] Manuscript is brought to submission ready state for sumbmission in …</p>
+</blockquote>
+<blockquote>
+<p>5 files changed, 32 insertions(+), 17 deletions(-)</p>
+</blockquote>
+<div id="finishing-presubmission-branch" class="section level5">
+<h5><span class="header-section-number">4.7.2.1.1</span> Finishing presubmission branch</h5>
+<p>When finished, the <code>presubmission</code> branch needs to be merged into <code>master</code>.</p>
+<p>First, update master and tag the release.</p>
+<blockquote>
+<p>$ git checkout master</p>
+</blockquote>
+<blockquote>
+<pre><code>  Switched to branch &#39;master&#39;</code></pre>
+</blockquote>
+<blockquote>
+<p>$ git merge –no-ff presubmission</p>
+</blockquote>
+<blockquote>
+<pre><code>  Merge made by recursive.</code></pre>
+</blockquote>
+<blockquote>
+<pre><code>  (Summary of changes)</code></pre>
+</blockquote>
+<blockquote>
+<p>$ git tag -a 0.1</p>
+</blockquote>
+<p>Finally, remove the temporary <code>presubmission</code> branch:</p>
+<blockquote>
+<p>$ git branch -d presubmission</p>
+</blockquote>
+<blockquote>
+<pre><code>  Deleted branch presubmission (was abbe5d6).</code></pre>
+</blockquote>
 
+</div>
+</div>
+</div>
 </div>
 </div>
             </section>
@@ -220,8 +374,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-
-<a href="prerequisites.html" class="navigation navigation-next navigation-unique" aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="rmarkdown-workflow.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="applications.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
@@ -249,7 +403,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-git-workflow.Rmd",
 "text": "Edit"
 },
 "download": ["sci-manuscript.pdf", "sci-manuscript.epub"],

@@ -34,7 +34,7 @@ Research manuscripts are an example of
 
 The folowing visual representation of a GitFlow was heavily adapted from: http://nvie.com/posts/a-successful-git-branching-model/
 
-![GitFlow for development of a Research Manuscript](GitFlow-Science.png)
+![GitFlow for development of a Research Manuscript](images/GitFlow-Science.png)
 
 
 

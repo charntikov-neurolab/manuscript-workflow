@@ -7,20 +7,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>R, RMarkdown, Git, and GitHub for Academic Writing: A Guide</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-  <meta name="description" content="This is a detailed manual outlining a workflow for creating and publishing academic manuscripts using R, RMarkdown, Git, and GitHub.">
+  <meta name="description" content="This guide attempts to deliver a comprehensive workflow for devoloping and publishing of academic manuscripts with the help of R, Rmarkdown, Git, and GitHub.">
   <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
 
   <meta property="og:title" content="R, RMarkdown, Git, and GitHub for Academic Writing: A Guide" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This is a detailed manual outlining a workflow for creating and publishing academic manuscripts using R, RMarkdown, Git, and GitHub." />
+  <meta property="og:description" content="This guide attempts to deliver a comprehensive workflow for devoloping and publishing of academic manuscripts with the help of R, Rmarkdown, Git, and GitHub." />
   <meta name="github-repo" content="scharntikov/manuscript-workflow" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="R, RMarkdown, Git, and GitHub for Academic Writing: A Guide" />
   
-  <meta name="twitter:description" content="This is a detailed manual outlining a workflow for creating and publishing academic manuscripts using R, RMarkdown, Git, and GitHub." />
+  <meta name="twitter:description" content="This guide attempts to deliver a comprehensive workflow for devoloping and publishing of academic manuscripts with the help of R, Rmarkdown, Git, and GitHub." />
   
 
 <meta name="author" content="Sergios (Sergey) Charntikov">
@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="prerequisites-1.html">
-<link rel="next" href="gitflow-for-manuscript-preparation-1.html">
+<link rel="prev" href="prerequisites.html">
+<link rel="next" href="gitflow-for-manuscript-preparation.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -110,74 +110,48 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i><b>1.3</b> Acknowledgments</a></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#about-the-author"><i class="fa fa-check"></i><b>1.4</b> About the author</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html"><i class="fa fa-check"></i><b>2</b> Markdown, Git, and GitHub for Academic Writing: A Guide</a><ul>
-<li class="chapter" data-level="2.1" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#prerequisites"><i class="fa fa-check"></i><b>2.1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2.2" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#rmarkdown-workflow"><i class="fa fa-check"></i><b>2.2</b> Rmarkdown workflow</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#markdown-template"><i class="fa fa-check"></i><b>2.2.1</b> Markdown Template</a></li>
-<li class="chapter" data-level="2.2.2" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#writing-in-markdown"><i class="fa fa-check"></i><b>2.2.2</b> Writing in markdown</a></li>
-<li class="chapter" data-level="2.2.3" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#latex"><i class="fa fa-check"></i><b>2.2.3</b> LaTex</a></li>
-<li class="chapter" data-level="2.2.4" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#tables"><i class="fa fa-check"></i><b>2.2.4</b> Tables</a></li>
+<li class="chapter" data-level="2" data-path="prerequisites.html"><a href="prerequisites.html"><i class="fa fa-check"></i><b>2</b> Prerequisites</a></li>
+<li class="chapter" data-level="3" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html"><i class="fa fa-check"></i><b>3</b> Rmarkdown workflow</a><ul>
+<li class="chapter" data-level="3.1" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#rmarkdown-template"><i class="fa fa-check"></i><b>3.1</b> RMarkdown Template</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#installation"><i class="fa fa-check"></i><b>3.1.1</b> Installation</a></li>
+<li class="chapter" data-level="3.1.2" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#using-rticles-from-rstudio"><i class="fa fa-check"></i><b>3.1.2</b> Using <code>rticles</code> from RStudio</a></li>
+<li class="chapter" data-level="3.1.3" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#yaml"><i class="fa fa-check"></i><b>3.1.3</b> YAML</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#figures"><i class="fa fa-check"></i><b>2.3</b> Figures</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#inserting-an-image-from-a-file"><i class="fa fa-check"></i><b>2.3.1</b> Inserting an image from a file</a></li>
-<li class="chapter" data-level="2.3.2" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#r-code-generated-figures"><i class="fa fa-check"></i><b>2.3.2</b> R code generated figures</a></li>
+<li class="chapter" data-level="3.2" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#writing-in-markdown"><i class="fa fa-check"></i><b>3.2</b> Writing in markdown</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#overview"><i class="fa fa-check"></i><b>3.2.1</b> Overview</a></li>
+<li class="chapter" data-level="3.2.2" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#markdown-basics"><i class="fa fa-check"></i><b>3.2.2</b> Markdown basics</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#gitflow-for-manuscript-preparation"><i class="fa fa-check"></i><b>2.4</b> GitFlow for Manuscript Preparation</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#why-use-git-for-manuscript-preparation"><i class="fa fa-check"></i><b>2.4.1</b> Why use Git for manuscript preparation?</a></li>
-<li class="chapter" data-level="2.4.2" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#general-overview-of-project-structure-over-time"><i class="fa fa-check"></i><b>2.4.2</b> General overview of project structure over time</a></li>
-<li class="chapter" data-level="2.4.3" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#general-overview-of-team-workflow"><i class="fa fa-check"></i><b>2.4.3</b> General overview of team workflow</a></li>
-<li class="chapter" data-level="2.4.4" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#general-outline"><i class="fa fa-check"></i><b>2.4.4</b> General outline</a></li>
+<li class="chapter" data-level="3.3" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#latex"><i class="fa fa-check"></i><b>3.3</b> LaTex</a></li>
+<li class="chapter" data-level="3.4" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#tables"><i class="fa fa-check"></i><b>3.4</b> Tables</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#plain-markdown-table"><i class="fa fa-check"></i><b>3.4.1</b> Plain markdown table</a></li>
+<li class="chapter" data-level="3.4.2" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#latex-tables"><i class="fa fa-check"></i><b>3.4.2</b> LaTex tables</a></li>
+<li class="chapter" data-level="3.4.3" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#r-code-generated-tables"><i class="fa fa-check"></i><b>3.4.3</b> R code generated tables</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#practical-appliation-to-a-manuscript-development"><i class="fa fa-check"></i><b>2.5</b> Practical appliation to a manuscript development</a></li>
-<li class="chapter" data-level="2.6" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#main-branches"><i class="fa fa-check"></i><b>2.6</b> Main branches</a></li>
-<li class="chapter" data-level="2.7" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#supporting-branches"><i class="fa fa-check"></i><b>2.7</b> Supporting branches</a><ul>
-<li class="chapter" data-level="2.7.1" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#feature-branches"><i class="fa fa-check"></i><b>2.7.1</b> Feature branches</a></li>
-<li class="chapter" data-level="2.7.2" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#pre-submission-branch"><i class="fa fa-check"></i><b>2.7.2</b> Pre-submission branch</a></li>
-</ul></li>
-<li class="chapter" data-level="2.8" data-path="markdown-git-and-github-for-academic-writing-a-guide.html"><a href="markdown-git-and-github-for-academic-writing-a-guide.html#data-visualization-and-analysis"><i class="fa fa-check"></i><b>2.8</b> Data Visualization and Analysis</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="prerequisites-1.html"><a href="prerequisites-1.html"><i class="fa fa-check"></i><b>3</b> Prerequisites</a></li>
-<li class="chapter" data-level="4" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html"><i class="fa fa-check"></i><b>4</b> Rmarkdown workflow</a><ul>
-<li class="chapter" data-level="4.1" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#markdown-template-1"><i class="fa fa-check"></i><b>4.1</b> Markdown Template</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#installation-1"><i class="fa fa-check"></i><b>4.1.1</b> Installation</a></li>
-<li class="chapter" data-level="4.1.2" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#using-rticles-from-rstudio-1"><i class="fa fa-check"></i><b>4.1.2</b> Using <code>rticles</code> from RStudio</a></li>
-<li class="chapter" data-level="4.1.3" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#yaml-1"><i class="fa fa-check"></i><b>4.1.3</b> YAML</a></li>
-</ul></li>
-<li class="chapter" data-level="4.2" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#writing-in-markdown-1"><i class="fa fa-check"></i><b>4.2</b> Writing in markdown</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#overview-1"><i class="fa fa-check"></i><b>4.2.1</b> Overview</a></li>
-<li class="chapter" data-level="4.2.2" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#markdown-basics-1"><i class="fa fa-check"></i><b>4.2.2</b> Markdown basics</a></li>
-</ul></li>
-<li class="chapter" data-level="4.3" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#latex-1"><i class="fa fa-check"></i><b>4.3</b> LaTex</a></li>
-<li class="chapter" data-level="4.4" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#tables-1"><i class="fa fa-check"></i><b>4.4</b> Tables</a><ul>
-<li class="chapter" data-level="4.4.1" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#plain-markdown-table-1"><i class="fa fa-check"></i><b>4.4.1</b> Plain markdown table</a></li>
-<li class="chapter" data-level="4.4.2" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#latex-tables-1"><i class="fa fa-check"></i><b>4.4.2</b> LaTex tables</a></li>
-<li class="chapter" data-level="4.4.3" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#r-code-generated-tables-1"><i class="fa fa-check"></i><b>4.4.3</b> R code generated tables</a></li>
-</ul></li>
-<li class="chapter" data-level="4.5" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#figures-1"><i class="fa fa-check"></i><b>4.5</b> Figures</a><ul>
-<li class="chapter" data-level="4.5.1" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#inserting-an-image-from-a-file-1"><i class="fa fa-check"></i><b>4.5.1</b> Inserting an image from a file</a></li>
-<li class="chapter" data-level="4.5.2" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#r-code-generated-figures-1"><i class="fa fa-check"></i><b>4.5.2</b> R code generated figures</a></li>
-<li class="chapter" data-level="4.5.3" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#crossreferensing-tips-1"><i class="fa fa-check"></i><b>4.5.3</b> Crossreferensing tips</a></li>
-<li class="chapter" data-level="4.5.4" data-path="rmarkdown-workflow-1.html"><a href="rmarkdown-workflow-1.html#setting-aspect-ratio-of-plots-1"><i class="fa fa-check"></i><b>4.5.4</b> Setting aspect ratio of plots</a></li>
+<li class="chapter" data-level="3.5" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#figures"><i class="fa fa-check"></i><b>3.5</b> Figures</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#inserting-an-image-from-a-file"><i class="fa fa-check"></i><b>3.5.1</b> Inserting an image from a file</a></li>
+<li class="chapter" data-level="3.5.2" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#r-code-generated-figures"><i class="fa fa-check"></i><b>3.5.2</b> R code generated figures</a></li>
+<li class="chapter" data-level="3.5.3" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#crossreferensing-tips"><i class="fa fa-check"></i><b>3.5.3</b> Crossreferensing tips</a></li>
+<li class="chapter" data-level="3.5.4" data-path="rmarkdown-workflow.html"><a href="rmarkdown-workflow.html#setting-aspect-ratio-of-plots"><i class="fa fa-check"></i><b>3.5.4</b> Setting aspect ratio of plots</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="gitflow-for-manuscript-preparation-1.html"><a href="gitflow-for-manuscript-preparation-1.html"><i class="fa fa-check"></i><b>5</b> GitFlow for Manuscript Preparation</a><ul>
-<li class="chapter" data-level="5.1" data-path="gitflow-for-manuscript-preparation-1.html"><a href="gitflow-for-manuscript-preparation-1.html#why-use-git-for-manuscript-preparation-1"><i class="fa fa-check"></i><b>5.1</b> Why use Git for manuscript preparation?</a></li>
-<li class="chapter" data-level="5.2" data-path="gitflow-for-manuscript-preparation-1.html"><a href="gitflow-for-manuscript-preparation-1.html#general-overview-of-project-structure-over-time-1"><i class="fa fa-check"></i><b>5.2</b> General overview of project structure over time</a></li>
-<li class="chapter" data-level="5.3" data-path="gitflow-for-manuscript-preparation-1.html"><a href="gitflow-for-manuscript-preparation-1.html#general-overview-of-team-workflow-1"><i class="fa fa-check"></i><b>5.3</b> General overview of team workflow</a></li>
-<li class="chapter" data-level="5.4" data-path="gitflow-for-manuscript-preparation-1.html"><a href="gitflow-for-manuscript-preparation-1.html#general-outline-1"><i class="fa fa-check"></i><b>5.4</b> General outline</a></li>
-<li class="chapter" data-level="5.5" data-path="gitflow-for-manuscript-preparation-1.html"><a href="gitflow-for-manuscript-preparation-1.html#practical-appliation-to-a-manuscript-development-1"><i class="fa fa-check"></i><b>5.5</b> Practical appliation to a manuscript development</a></li>
-<li class="chapter" data-level="5.6" data-path="gitflow-for-manuscript-preparation-1.html"><a href="gitflow-for-manuscript-preparation-1.html#main-branches-1"><i class="fa fa-check"></i><b>5.6</b> Main branches</a></li>
-<li class="chapter" data-level="5.7" data-path="gitflow-for-manuscript-preparation-1.html"><a href="gitflow-for-manuscript-preparation-1.html#supporting-branches-1"><i class="fa fa-check"></i><b>5.7</b> Supporting branches</a><ul>
-<li class="chapter" data-level="5.7.1" data-path="gitflow-for-manuscript-preparation-1.html"><a href="gitflow-for-manuscript-preparation-1.html#feature-branches-1"><i class="fa fa-check"></i><b>5.7.1</b> Feature branches</a></li>
-<li class="chapter" data-level="5.7.2" data-path="gitflow-for-manuscript-preparation-1.html"><a href="gitflow-for-manuscript-preparation-1.html#pre-submission-branch-1"><i class="fa fa-check"></i><b>5.7.2</b> Pre-submission branch</a></li>
+<li class="chapter" data-level="4" data-path="gitflow-for-manuscript-preparation.html"><a href="gitflow-for-manuscript-preparation.html"><i class="fa fa-check"></i><b>4</b> GitFlow for Manuscript Preparation</a><ul>
+<li class="chapter" data-level="4.1" data-path="gitflow-for-manuscript-preparation.html"><a href="gitflow-for-manuscript-preparation.html#why-use-git-for-manuscript-preparation"><i class="fa fa-check"></i><b>4.1</b> Why use Git for manuscript preparation?</a></li>
+<li class="chapter" data-level="4.2" data-path="gitflow-for-manuscript-preparation.html"><a href="gitflow-for-manuscript-preparation.html#general-overview-of-project-structure-over-time"><i class="fa fa-check"></i><b>4.2</b> General overview of project structure over time</a></li>
+<li class="chapter" data-level="4.3" data-path="gitflow-for-manuscript-preparation.html"><a href="gitflow-for-manuscript-preparation.html#general-overview-of-team-workflow"><i class="fa fa-check"></i><b>4.3</b> General overview of team workflow</a></li>
+<li class="chapter" data-level="4.4" data-path="gitflow-for-manuscript-preparation.html"><a href="gitflow-for-manuscript-preparation.html#general-outline"><i class="fa fa-check"></i><b>4.4</b> General outline</a></li>
+<li class="chapter" data-level="4.5" data-path="gitflow-for-manuscript-preparation.html"><a href="gitflow-for-manuscript-preparation.html#practical-appliation-to-a-manuscript-development"><i class="fa fa-check"></i><b>4.5</b> Practical appliation to a manuscript development</a></li>
+<li class="chapter" data-level="4.6" data-path="gitflow-for-manuscript-preparation.html"><a href="gitflow-for-manuscript-preparation.html#main-branches"><i class="fa fa-check"></i><b>4.6</b> Main branches</a></li>
+<li class="chapter" data-level="4.7" data-path="gitflow-for-manuscript-preparation.html"><a href="gitflow-for-manuscript-preparation.html#supporting-branches"><i class="fa fa-check"></i><b>4.7</b> Supporting branches</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="gitflow-for-manuscript-preparation.html"><a href="gitflow-for-manuscript-preparation.html#feature-branches"><i class="fa fa-check"></i><b>4.7.1</b> Feature branches</a></li>
+<li class="chapter" data-level="4.7.2" data-path="gitflow-for-manuscript-preparation.html"><a href="gitflow-for-manuscript-preparation.html#pre-submission-branch"><i class="fa fa-check"></i><b>4.7.2</b> Pre-submission branch</a></li>
 </ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
+<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
+<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="" data-path="references-2.html"><a href="references-2.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="" data-path="references-3.html"><a href="references-3.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="" data-path="references-4.html"><a href="references-4.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -198,23 +172,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="rmarkdown-workflow-1" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Rmarkdown workflow</h1>
-<div id="markdown-template-1" class="section level2">
-<h2><span class="header-section-number">4.1</span> Markdown Template</h2>
+<div id="rmarkdown-workflow" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Rmarkdown workflow</h1>
+<div id="rmarkdown-template" class="section level2">
+<h2><span class="header-section-number">3.1</span> RMarkdown Template</h2>
 <p>To write this manuscript we are using Rmarkdown Elsevier template. The <code>rticles</code> package provides a suite of custom R Markdown LaTeX formats and templates for various formats, including Elsevier journal template.</p>
 <p>Under the hood, LaTeX templates are used to ensure that documents conform precisely to submission standards. At the same time, composition and formatting can be done using lightweight markdown syntax, and R code and its output can be seamlessly included using knitr.</p>
 <p>Using <code>rticles</code> requires the prerequisites that will be automatically installed with the latest release of RStudio. Please make sure that you are using latest version of RStudio and update all the packages in your package library.</p>
 <p><code>rticles</code> - <a href="https://github.com/rstudio/rticles" class="uri">https://github.com/rstudio/rticles</a></p>
-<div id="installation-1" class="section level3">
-<h3><span class="header-section-number">4.1.1</span> Installation</h3>
+<div id="installation" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Installation</h3>
 <p>You can install and use <code>rticles</code> from CRAN as follows:</p>
 <p><code>install.packages(&quot;rticles&quot;, type = &quot;source&quot;)</code></p>
 <p>If you wish to install the development version from GitHub you can do this:</p>
 <p><code>devtools::install_github(&quot;rstudio/rticles&quot;)</code></p>
 </div>
-<div id="using-rticles-from-rstudio-1" class="section level3">
-<h3><span class="header-section-number">4.1.2</span> Using <code>rticles</code> from RStudio</h3>
+<div id="using-rticles-from-rstudio" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Using <code>rticles</code> from RStudio</h3>
 <ul>
 <li>Install latest RStudio</li>
 <li>Install the <code>rticles</code> package
@@ -224,8 +198,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>RStudio::File-New R Markdown-From Template-Elsevier Journal Article</li>
 </ul>
 </div>
-<div id="yaml-1" class="section level3">
-<h3><span class="header-section-number">4.1.3</span> YAML</h3>
+<div id="yaml" class="section level3">
+<h3><span class="header-section-number">3.1.3</span> YAML</h3>
 <p>YAML is the preamble found at the top of the .Rmd file. YAML is used to configure front matter of the article and some other important technical parameters of your document.</p>
 <p>Front matter:</p>
 <pre><code>title:
@@ -243,14 +217,14 @@ csl: biomed-central.csl</code></pre>
     base_format: rticles::elsevier_article</code></pre>
 </div>
 </div>
-<div id="writing-in-markdown-1" class="section level2">
-<h2><span class="header-section-number">4.2</span> Writing in markdown</h2>
-<div id="overview-1" class="section level3">
-<h3><span class="header-section-number">4.2.1</span> Overview</h3>
+<div id="writing-in-markdown" class="section level2">
+<h2><span class="header-section-number">3.2</span> Writing in markdown</h2>
+<div id="overview" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Overview</h3>
 <p>Writing in markdown is fairly easy even without prior knowledge of other markup languages. Markdown is a lightweight markup language design so it can be converted to many other formats including LaTex - a format commonly used for typesetting academic typography. Writing in markdown is much more pleasing than writing in LaTex because of the minimal markup. Because of the minimal markup, documents written in markdown can be easily read and edited without code distractions. Furthermore, because markdown documents are written in plain text they can be edited with a plain text editor which are freely available on all major platforms. There are many specially designed editors with additional features that may be more attractive to different groups of developers or writers working with markdown documents. Editors that work great for writing academic style documents include RStudio, Atom, and Sublime Text.</p>
 </div>
-<div id="markdown-basics-1" class="section level3">
-<h3><span class="header-section-number">4.2.2</span> Markdown basics</h3>
+<div id="markdown-basics" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Markdown basics</h3>
 <p>Emphasis</p>
 <pre><code>*italic*   **bold**
 
@@ -275,14 +249,14 @@ _italic_   __bold__</code></pre>
 <p>More on Markdown basics can found on the excellent RStudio website: <a href="http://rmarkdown.rstudio.com/authoring_basics.html" class="uri">http://rmarkdown.rstudio.com/authoring_basics.html</a></p>
 </div>
 </div>
-<div id="latex-1" class="section level2">
-<h2><span class="header-section-number">4.3</span> LaTex</h2>
+<div id="latex" class="section level2">
+<h2><span class="header-section-number">3.3</span> LaTex</h2>
 <p>Any LaTex code can be included in the markdown document. LaTex code included in the <code>.Rmd</code> file will be processed (“knitted”) by RStudio’s <code>knitr</code> package and then passed to <code>pandoc</code> document converter. In this process, <code>knitr</code> takes plain text document with markup and code, executes embedded commands, and then compiles results into a separate document which is then passed to <code>pandoc</code> for final conversion. In the workflow relevant to writing academic manuscript using raw <code>.Rmd</code> file, <code>.Rmd</code> file is first converted to <code>.tex</code> and then the resulting <code>.tex</code> file is converted to .pdf.</p>
 </div>
-<div id="tables-1" class="section level2">
-<h2><span class="header-section-number">4.4</span> Tables</h2>
-<div id="plain-markdown-table-1" class="section level3">
-<h3><span class="header-section-number">4.4.1</span> Plain markdown table</h3>
+<div id="tables" class="section level2">
+<h2><span class="header-section-number">3.4</span> Tables</h2>
+<div id="plain-markdown-table" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> Plain markdown table</h3>
 <p>Adding tables to a manuscript is easy with plain markdown. See an example below of how you can</p>
 <pre><code>Header 1 | Header 2
 ------------- | -------------
@@ -309,55 +283,55 @@ Cell 3 | Cell 4</code></pre>
 </tbody>
 </table>
 </div>
-<div id="latex-tables-1" class="section level3">
-<h3><span class="header-section-number">4.4.2</span> LaTex tables</h3>
+<div id="latex-tables" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> LaTex tables</h3>
 <p>LaTex tables can be embedded into <code>.Rmd</code> markdown file. LaTex tables can be generated using popular R packages like <code>stargazer</code> or <code>xtable</code>. LaTex tables can be also generated by numerous free online conversion or table generation services (just google it).</p>
 </div>
-<div id="r-code-generated-tables-1" class="section level3">
-<h3><span class="header-section-number">4.4.3</span> R code generated tables</h3>
+<div id="r-code-generated-tables" class="section level3">
+<h3><span class="header-section-number">3.4.3</span> R code generated tables</h3>
 <p>To reference a table a table needs to be included in the r chunk with the chunk label.</p>
-<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">```{r cars-table}
+<pre><code>```{r cars-table}
 library(&quot;knitr&quot;)
 
 kable(
   head(mtcars[, 1:8], 10), booktabs = TRUE,
   caption = &#39;A table of the first 10 rows of the mtcars data.&#39;
 )
-```</code></pre></div>
+```</code></pre>
 <p>In the example above the chunk label is <code>cars-table</code> so to reference this table use prefix <code>tab:</code> plus the chunk label - <code>tab:cars-table</code>. Here is the referencing in action (see Table <code>\@ref(tab:cars-table)</code>).</p>
 <p>Using this approach tables will be generated at the end of the manuscript accompanied with an automatic generation of the “List of Tables” (hyperlinks in all locations included).</p>
 </div>
 </div>
-<div id="figures-1" class="section level2">
-<h2><span class="header-section-number">4.5</span> Figures</h2>
+<div id="figures" class="section level2">
+<h2><span class="header-section-number">3.5</span> Figures</h2>
 <p>Adding figures to your manuscript can be done by inserting pre-generated images or by generating figures right from the embedded R code. It is highly advisable to adapt the latter approach of generating figures from embedded r code to enhance reproducibility of your findings and to minimize common versioning errors (unintended inclusion of earlier or inaccurate version of the figure).</p>
-<div id="inserting-an-image-from-a-file-1" class="section level3">
-<h3><span class="header-section-number">4.5.1</span> Inserting an image from a file</h3>
+<div id="inserting-an-image-from-a-file" class="section level3">
+<h3><span class="header-section-number">3.5.1</span> Inserting an image from a file</h3>
 <p><code>![caption for my image](path/to/image.jpg)</code></p>
 <p>It is possible to include an image from any accessible directory. However, it is advisable to have a /figures or /images folder in your project directory with all the figures or images used for the project.</p>
 <p>Elsevier template will automatically generate figure caption. If you are using other template to typeset your manuscript then you may need to add <code>fig_caption: yes</code> YAML option to render a caption.</p>
 </div>
-<div id="r-code-generated-figures-1" class="section level3">
-<h3><span class="header-section-number">4.5.2</span> R code generated figures</h3>
+<div id="r-code-generated-figures" class="section level3">
+<h3><span class="header-section-number">3.5.2</span> R code generated figures</h3>
 <p>It is advisable to generate figures directly from a code embedded in the manuscript. One of the options to do that would be to include R code for each figure in each separate <code>figure</code> environment (chunk ) at the very end of your manuscript. This way each figure <code>chunk</code> can have reference label and a figure captions (e.g., <code>{r nice-fig, fig.cap='Here is a nice figure!'}</code>). Chunk parameters also can be used fine tune apperance of the figure in the manuscritp (e.g., <code>out.width='80%', fig.asp=.75, fig.align='center'</code>).</p>
 <p>For example:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="st">```</span><span class="dt">{r nice-fig, fig.cap=&#39;Here is a nice figure!&#39;, out.width=&#39;80%&#39;,</span>
-<span class="dt">fig.asp=.75, fig.align=&#39;center&#39;}</span>
-<span class="dt">par(mar = c(4, 4, .1, .1))</span>
-<span class="dt">plot(pressure, type = &#39;b&#39;, pch = 19)</span>
-<span class="st">```</span></code></pre></div>
+<pre><code>```{r nice-fig, fig.cap=&#39;Here is a nice figure!&#39;, out.width=&#39;80%&#39;,
+fig.asp=.75, fig.align=&#39;center&#39;}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = &#39;b&#39;, pch = 19)
+```</code></pre>
 <p>Figure can be referenced by its code chunk label with the <code>fig:</code> prefix, e.g., see Figure <code>\@ref(fig:nice-fig)</code>.</p>
 <p>The following guideline is from <a href="https://bookdown.org/yihui/bookdown/" class="uri">https://bookdown.org/yihui/bookdown/</a></p>
 <blockquote>
 <p>If you want to cross-reference figures or tables generated from a code chunk, please make sure the chunk label only contains alphanumeric characters (a-z, A-Z, 0-9), slashes (/), or dashes (-).</p>
 </blockquote>
 </div>
-<div id="crossreferensing-tips-1" class="section level3">
-<h3><span class="header-section-number">4.5.3</span> Crossreferensing tips</h3>
+<div id="crossreferensing-tips" class="section level3">
+<h3><span class="header-section-number">3.5.3</span> Crossreferensing tips</h3>
 <p>To cross reference figures or tables generated within a code chunk labels within the chunk should only contain alphanumeric characters (a-z, A-Z, 0-9), slashes (/), or dashes (-). For example <code>{r nice-fig</code> and not <code>{r nice.fig</code> or <code>{r nice&amp;fig</code>.</p>
 </div>
-<div id="setting-aspect-ratio-of-plots-1" class="section level3">
-<h3><span class="header-section-number">4.5.4</span> Setting aspect ratio of plots</h3>
+<div id="setting-aspect-ratio-of-plots" class="section level3">
+<h3><span class="header-section-number">3.5.4</span> Setting aspect ratio of plots</h3>
 <p>The aspect ratio of a figure is the ratio of its longer side to its shorter side - the with to height ratio. The golden ratio (1.618) is the ratio that has been appearing in ancient artwork as early as 2,400 BCE and fascinated many ancient mathematicians and artists alike. Edward Tufte suggested that “[g]raphics should tend toward the horizontal” and proposed the use of Golden ratio to create visually appealing figures (Tufte, E. R. 2001). Aspect ratio in R chunk can be set by using <code>fig.asp</code> command. For example, to set a Golden ratio for a figure (1/1.618=0.618) you would type <code>fig.asp=0.618</code></p>
 <blockquote>
 <p>The chunk option <code>fig.asp</code> can be used to set the aspect ratio of plots, i.e., the ratio of figure height/width. If the figure width is 6 inches (<code>fig.width = 6</code>) and <code>fig.asp = 0.7</code>, the figure height will be automatically calculated from <code>fig.width * fig.asp = 6 * 0.7 = 4.2</code>.</p>
@@ -374,8 +348,8 @@ kable(
           </div>
         </div>
       </div>
-<a href="prerequisites-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="gitflow-for-manuscript-preparation-1.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="prerequisites.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="gitflow-for-manuscript-preparation.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
@@ -403,10 +377,10 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-rmarkdow-workflow.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-markdown-workflow.Rmd",
 "text": "Edit"
 },
-"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"download": ["sci-manuscript.pdf", "sci-manuscript.epub"],
 "toc": {
 "collapse": "subsection"
 }
