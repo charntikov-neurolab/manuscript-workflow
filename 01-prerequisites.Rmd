@@ -1,4 +1,13 @@
 # Prerequisites
 
+Here is what you need to implement the workflow outlined in this manual.
+
+*Software*
+
 - R - https://www.r-project.org/
 - RStudio - https://www.rstudio.com/
+- Git - https://git-scm.com/downloads
+- Optional Git GUI client - https://git-scm.com/downloads
+- Optional GitHub Account - https://github.com/
+- Optional free private repositories from GitHub for education - https://education.github.com/discount_requests/new
+- Optional modern and "hackable" text editor - https://atom.io/

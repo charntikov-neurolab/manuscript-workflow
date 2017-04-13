@@ -1,4 +1,4 @@
---- 
+---
 title: " R, RMarkdown, Git, and GitHub for Academic Writing: A Guide"
 author: "Sergios (Sergey) Charntikov"
 date: "`r Sys.Date()`"
@@ -14,20 +14,23 @@ description: "This guide attempts to deliver a comprehensive workflow for devolo
 
 # Preface
 
+The goal for this guide is to provide a comprehensive workflow for devoloping and publishing academic manuscripts with the help of R, Rmarkdown, Git, and GitHub.
 
-What is this book all about
+## Structure of the manual
 
-## Structure of the book
+This manual is structured in a series of chapters outlining a process of developing a complete submission ready draft of an academic manuscript. In the initial chapters you will learn how to setup your machine to implement proposed workflow, how to setup a project directory to efficiently organize all relevant files, and how to write and a complete manuscript using minimal markup environment. Later you will learn how to harness power of Git to manage incremental development of your manuscript using GitFlow approach (http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/). We will then move to practical solutions of embedding data visualization and data analysis code in the body of your manuscript file to minimize human error and improve overall reproducibility of your study. Finally, we will outline final steps leading to submission of your manuscript including organization of supplemental materials, submission guide, and a complete template to implement the workflow outlined in this manual.
 
-## Software information 
 
-The R session information when compiling this book is shown below:
+## Software information
+
+R session information when compiling this book is shown below to ensure reproducibility of all the steps outlined in this manual.
 
 ```{r}
 sessionInfo()
 ```
 
-
 ## Acknowledgments
+
+I would like to thank Yihui Xie and Hadley Wickham, of RStudio, for inspiring me to develop this manual and for developing tools that empower scientist to better communicate their scientific findings. 
 
 ## About the author
