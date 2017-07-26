@@ -144,14 +144,32 @@
 }
 \chapter{Preface}\label{preface}
 
-This document is conceptualized as a detailed manual for implementation
-of
+The goal for this guide is to provide a comprehensive workflow for
+devoloping and publishing academic manuscripts with the help of R,
+Rmarkdown, Git, and GitHub.
 
-\section{Structure of the book}\label{structure-of-the-book}
+\section{Structure of the manual}\label{structure-of-the-manual}
+
+This manual is structured in a series of chapters outlining a process of
+developing a complete submission ready draft of an academic manuscript.
+In the initial chapters you will learn how to setup your machine to
+implement proposed workflow, how to setup a project directory to
+efficiently organize all relevant files, and how to write and a complete
+manuscript using minimal markup environment. Later you will learn how to
+harness power of Git to manage incremental development of your
+manuscript using GitFlow approach
+(\url{http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/}).
+We will then move to practical solutions of embedding data visualization
+and data analysis code in the body of your manuscript file to minimize
+human error and improve overall reproducibility of your study. Finally,
+we will outline final steps leading to submission of your manuscript
+including organization of supplemental materials, submission guide, and
+a complete template to implement the workflow outlined in this manual.
 
 \section{Software information}\label{software-information}
 
-The R session information when compiling this book is shown below:
+R session information when compiling this book is shown below to ensure
+reproducibility of all the steps outlined in this manual.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -183,9 +201,17 @@ The R session information when compiling this book is shown below:
 
 \section{Acknowledgments}\label{acknowledgments}
 
+I would like to thank Yihui Xie and Hadley Wickham, of RStudio, for
+inspiring me to develop this manual and for developing tools that
+empower scientist to better communicate their scientific findings.
+
 \section{About the author}\label{about-the-author}
 
 \chapter{Prerequisites}\label{prerequisites}
+
+Here is what you need to implement the workflow outlined in this manual.
+
+\emph{Software}
 
 \begin{itemize}
 \tightlist
@@ -193,6 +219,17 @@ The R session information when compiling this book is shown below:
   R - \url{https://www.r-project.org/}
 \item
   RStudio - \url{https://www.rstudio.com/}
+\item
+  Git - \url{https://git-scm.com/downloads}
+\item
+  Optional Git GUI client - \url{https://git-scm.com/downloads}
+\item
+  Optional GitHub Account - \url{https://github.com/}
+\item
+  Optional free private repositories from GitHub for education -
+  \url{https://education.github.com/discount_requests/new}
+\item
+  Optional modern and ``hackable'' text editor - \url{https://atom.io/}
 \end{itemize}
 
 \chapter{Rmarkdown workflow}\label{rmarkdown-workflow}
